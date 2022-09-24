@@ -11,14 +11,18 @@
   
   <body style="margin: 0; overflow: hidden;">
     
-  <h1>Hello!</h1>
-    
     <a-scene
-      vr-mode-ui="enabled: false"
+      vr-mode-ui="enabled: true"
       embedded
-      arjs="sourceType: webcam; debugUIEnabled: false;"
+      arjs="sourceType: webcam; debugUIEnabled: true;"
     >
-    <a-box color="red" gps-entity-place="latitude: 52.290818; longitude: -1.953598;" rotation="0 45 45" scale="2 2 2"></a-box>
+    <a-assets>
+      <a-asset-item id="cube" src="scene.gltf"></a-asset-item>
+    </a-assets>
+      
+    <a-gltf-model src="#cube" gps-entity-place="latitude: 52.290818; longitude: -1.953598;" ></a-gltf-model>
+      
+    <!--<a-box color="red" gps-entity-place="latitude: 52.290818; longitude: -1.953598;" rotation="0 45 45" scale="2 2 2"></a-box>-->
  
       <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
