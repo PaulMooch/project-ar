@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+  </head>
+  <body>
+    <a-scene renderer="antialias= true" fxaa="true">
+      <a-sky color="black"></a-sky>
+      <a-assets>
+        <a-asset-item id="megaphone" src="megaphone_2/Megaphone-Modified.gltf"></a-asset-item>
+        <audio id="daftpunk" src="Daft-Punk-End-of-Line.mp3" preload="auto"></audio>
+        <audio id="daftpunk2" src="Daft-Punk-End-of-Line.mp3" preload="auto"></audio>
+        <img id="play_button" src="play_icon.png" crossorigin="anonymous"/>
+        <img id="album_cover" src="album_cover.webp" crossorigin="anonymous"/>
+      </a-assets>
+      <a-entity light="intensity: 2.5;type: ambient;"></a-entity>
+      <a-entity id="musicplayer" position="0 2 -4" scale="6 6 6" gltf-model="#megaphone" sound="src: #daftpunk;" modify-materials animation-mixer></a-entity>
+      <!-- Camera + cursor. (for looking at buttons to activate) -->
+      <a-entity id="cameraRig" position="0 1.6 0">
+        <a-camera look-controls wasd-controls position="0 0 0">
+          <a-gui-cursor id="cursor"
+                raycaster="objects: [gui-interactable]"
+                fuse="true" fuse-timeout="2000"
+                color="#ECEFF1"
+                hover-color="#CFD8DC"
+                active-color="#607D8B"
+                design="cross" > <!-- dot, ring, reticle, cross  -->
+          </a-gui-cursor> <!-- /cursor -->
+        </a-camera> <!-- /camera -->
+      </a-entity>
+      <script>
+        var soundentity = document.querySelector('#musicplayer');
+      </script>
+      <!-- End Camera -->
+      <a-gui-flex-container width="2.2" height="1" opacity="0.5" base-depth="0.025" 
+        depth="0.1" justify-content="center"
+        gap="0.1"position="0 0.75 -2">
+        <a-plane width="0.8" height="0.8" position="-0.6 0 0.01" material="src: #album_cover;"></a-plane>
+        <a-entity geometry="primitive: plane; width: 1.2; height: 0.13" position="0.445 0.365 -0.001" material="opacity: 0.0; transparent: true">
+          <a-text id="textPrimitive" position="0 0 0.001" align="center" anchor="center" width="1.6" font="roboto" value="Song Title - This is the title">
+          </a-text>
+        </a-entity>
+        <a-entity geometry="primitive: plane; width: 1.2; height: 0.13" position="0.445 0.25 -0.001" material="opacity: 0.0; transparent: true">
+          <a-text id="textPrimitive" position="0 0 0.001" align="center" anchor="center" width="1.6" font="roboto" value="Ablum Title - This is the title of album">
+          </a-text>
+        </a-entity>
+        <a-entity geometry="primitive: plane; width: 1.2; height: 0.13" position="0.445 0.14 -0.001" material="opacity: 0.0; transparent: true">
+          <a-text id="textPrimitive" position="0 0 0.001" align="center" anchor="center" width="1.3" font="roboto" value="Artist Name">
+          </a-text>
+        </a-entity>
+        <a-gui-icon-button
+          height="0.4" width="0.4"
+          onclick="playMusicFunction(soundentity)" key-code="32"
+          icon="f04b"
+          icon-font="assets/fonts/fa-solid-900.ttf"
+          margin="0 0 0.5 0"
+          position="0.43 -0.15 0"
+          justify-content="center"
+        ><a-plane width="0.35" height="0.35" position="0 0 0.05" material="src: #play_button; transparent:true; opacity:0.9;alpha-test:0.5"></a-plane>
+      </a-gui-icon-button>  
+      </a-gui-flex-container>
+    </a-scene>
+
+  </body>
+</html>
