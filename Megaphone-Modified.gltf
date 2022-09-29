@@ -1,0 +1,331 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.2.40",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Megaphone_01.001",
+            "translation" : [
+                -0.2137296497821808,
+                -0.00013542920351028442,
+                0.00043317675590515137
+            ]
+        },
+        {
+            "children" : [
+                0
+            ],
+            "mesh" : 1,
+            "name" : "Megaphone_01"
+        }
+    ],
+    "animations" : [
+        {
+            "channels" : [
+                {
+                    "sampler" : 0,
+                    "target" : {
+                        "node" : 1,
+                        "path" : "rotation"
+                    }
+                }
+            ],
+            "name" : "Megaphone_01Action",
+            "samplers" : [
+                {
+                    "input" : 8,
+                    "interpolation" : "LINEAR",
+                    "output" : 9
+                }
+            ]
+        },
+        {
+            "channels" : [
+                {
+                    "sampler" : 0,
+                    "target" : {
+                        "node" : 0,
+                        "path" : "scale"
+                    }
+                }
+            ],
+            "name" : "Megaphone_01.001Action",
+            "samplers" : [
+                {
+                    "input" : 8,
+                    "interpolation" : "LINEAR",
+                    "output" : 10
+                }
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "emissiveFactor" : [
+                1,
+                1,
+                1
+            ],
+            "name" : "Material.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0,
+                    0,
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "Megaphone_01",
+            "normalTexture" : {
+                "index" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1
+                },
+                "metallicRoughnessTexture" : {
+                    "index" : 2
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Polsen MP-25 LP.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "Polsen MP-25 LP",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Megaphone_01_nor_gl_4k",
+            "uri" : "Megaphone_01_nor_gl_4k.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Megaphone_01_diff_4k",
+            "uri" : "Megaphone_01_diff_4k.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Megaphone_01_arm_4k",
+            "uri" : "Megaphone_01_arm_4k.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 512,
+            "max" : [
+                0.0014140605926513672,
+                0.0807868093252182,
+                0.0807868018746376
+            ],
+            "min" : [
+                -0.001414179801940918,
+                -0.0807868093252182,
+                -0.0807868242263794
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 512,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 512,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 768,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 11112,
+            "max" : [
+                0.1425524652004242,
+                0.1144845262169838,
+                0.11429242789745331
+            ],
+            "min" : [
+                -0.228113055229187,
+                -0.18559351563453674,
+                -0.11416112631559372
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 11112,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 11112,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 47442,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 100,
+            "max" : [
+                4.166666666666667
+            ],
+            "min" : [
+                0.041666666666666664
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 100,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5126,
+            "count" : 100,
+            "type" : "VEC3"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 6144,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6144,
+            "byteOffset" : 6144
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4096,
+            "byteOffset" : 12288
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1536,
+            "byteOffset" : 16384
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 133344,
+            "byteOffset" : 17920
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 133344,
+            "byteOffset" : 151264
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 88896,
+            "byteOffset" : 284608
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 94884,
+            "byteOffset" : 373504
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 400,
+            "byteOffset" : 468388
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1600,
+            "byteOffset" : 468788
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1200,
+            "byteOffset" : 470388
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 471588,
+            "uri" : "Megaphone-Modified.bin"
+        }
+    ]
+}
