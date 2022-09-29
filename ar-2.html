@@ -18,26 +18,23 @@
       arjs="sourceType: webcam; debugUIEnabled: false;"
              >
       <a-assets>
-        <a-asset-item id="megaphone" gps-entity-place="latitude: 52.321407; longitude: -1.973523;" src="Megaphone-Modified.gltf"></a-asset-item>
+        <a-asset-item id="megaphone" src="Megaphone-Modified.gltf"></a-asset-item>
         <audio id="daftpunk" src="Daft-Punk-End-of-Line.mp3" preload="auto"></audio>
         <audio id="daftpunk2" src="Daft-Punk-End-of-Line.mp3" preload="auto"></audio>
         <img id="play_button" src="play_icon.png" crossorigin="anonymous"/>
         <img id="album_cover" src="album_cover.webp" crossorigin="anonymous"/>
+        <a-asset-item id="MetaMooch" src="MetaMooch.gltf"></a-asset-item>
+        <a-asset-item id="1-Guy" src="1-Guy.gltf"></a-asset-item>
       </a-assets>
       
-        <a-assets>
-      <a-asset-item id="MetaMooch" src="MetaMooch.gltf"></a-asset-item>
-      <a-asset-item id="1-Guy" src="1-Guy.gltf"></a-asset-item>
-    </a-assets>
-      
-      <!-- Mooch Fountain --> <a-gltf-model src="#MetaMooch" look-at="[gps-camera]" scale="5 5 5" gps-entity-place="latitude: 52.321407; longitude: -1.973523;" ></a-gltf-model>
+    <!-- Mooch Fountain --> <a-gltf-model src="#MetaMooch" look-at="[gps-camera]" scale="5 5 5" gps-entity-place="latitude: 52.321407; longitude: -1.973523;" ></a-gltf-model>
       
     <!-- Mooch new office --> <a-gltf-model src="#MetaMooch" scale="2 2 2" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" gps-entity-place="latitude: 52.321273; longitude: -1.973479;" ></a-gltf-model>
       
     <!-- Mooch Current office --><a-gltf-model src="#1-Guy" look-at="[gps-camera]" scale="2 2 2" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" gps-entity-place="latitude: 52.321407; longitude: -1.97392;" ></a-gltf-model>
       
       <a-entity light="intensity: 2.5;type: ambient;"></a-entity>
-      <a-entity id="musicplayer" position="0 2 -4" scale="6 6 6" gltf-model="#megaphone" sound="src: #daftpunk;" modify-materials animation-mixer></a-entity>
+      <a-entity id="musicplayer" position="0 2 -4" scale="6 6 6" gltf-model="#megaphone" sound="src: #daftpunk;" modify-materials animation-mixer gps-entity-place="latitude: 52.321407; longitude: -1.973523;"></a-entity>
       <!-- Camera + cursor. (for looking at buttons to activate) -->
       <a-entity id="cameraRig" position="0 1.6 0">
         <a-camera gps-camera='gpsMinDistance: 5' rotation-reader >
